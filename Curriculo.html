@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      color: #333333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    section {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .toggle-details {
+      color: #4a7ea1;
+      cursor: pointer;
+      font-size: 0.9rem;
+      user-select: none;
+      margin-top: 8px;
+      display: inline-block;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bruno Almeida Junior</h1>
+    <p>Email: jrbruno@gmail.com | Telefone: (16) 99999-9999 | Ribeirão Preto, SP</p>
+  </header>
+
+  <section id="objetivo">
+    <h2>Objetivo</h2>
+    <p>Professor de Educação Física com experiência em promover saúde, bem-estar e desenvolvimento motor, buscando contribuir com práticas educativas que incentivem hábitos saudáveis e o trabalho em equipe.</p>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiência Profissional</h2>
+    <ul>
+      <li>
+        <strong>Instrtutor Academia</strong> - Empresa X (2022 - Presente)
+        <br />
+        <span class="toggle-details" onclick="toggleDetails(this)">Mostrar detalhes</span>
+        <p class="hidden">Acompanhamento de alunos em treinamentos, elaboração de treinos personalizados, orientação sobre postura e uso correto dos equipamentos, incentivo ao alcance de metas de saúde e condicionamento físico.</p>
+      </li>
+      <li>
+        <strong>Estagiário de Educação Física</strong> - Empresa Y (2020 - 2022)
+        <br />
+        <span class="toggle-details" onclick="toggleDetails(this)">Mostrar detalhes</span>
+        <p class="hidden">Auxílio em aulas práticas, acompanhamento de atividades esportivas e recreativas, apoio na orientação de alunos, organização de materiais e estímulo à participação nas atividades.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="formacao">
+    <h2>Formação</h2>
+    <ul>
+      <li>Graduação em Educação Física - Universidade XYZ (em andamento)</li>
+    </ul>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Elaboração e acompanhamento de treinos personalizados</li>
+      <li>Orientação sobre postura e execução correta de exercícios</li>
+      <li>Motivação e incentivo ao desenvolvimento físico e pessoal</li>
+      <li>Conhecimento em anatomia e fisiologia do exercício</li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleDetails(element) {
+      const p = element.nextElementSibling;
+      if (p.classList.contains('hidden')) {
+        p.classList.remove('hidden');
+        element.textContent = 'Ocultar detalhes';
+      } else {
+        p.classList.add('hidden');
+        element.textContent = 'Mostrar detalhes';
+      }
+    }
+  </script>
+</body>
+</html>
